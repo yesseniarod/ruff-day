@@ -60,6 +60,7 @@ button {
   width: 75%;
   height: 20rem;
   background-color: aliceblue;
+  border-radius: 0.5rem;
 }
 
 .hide {
