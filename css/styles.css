@@ -1,0 +1,12 @@
+header {
+  width: 100%;
+  background-color: #8fedd6;
+}
+
+i.fas.fa-bars {
+  font-size: 2rem;
+}
+
+i.fas.fa-bars.hidden {
+  visibility: hidden;
+}
