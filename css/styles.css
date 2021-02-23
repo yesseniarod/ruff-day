@@ -10,3 +10,7 @@ i.fas.fa-bars {
 i.fas.fa-bars.hidden {
   visibility: hidden;
 }
+
+p {
+  font-size: 1.5rem;
+}
