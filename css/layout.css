@@ -29,3 +29,23 @@
   justify-content: center;
   display: flex;
 }
+
+@media screen and (min-width: 768px) {
+  .half-col.left {
+    margin-left: 6rem;
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .half-col.right {
+    margin-right: 6rem;
+    margin-top: 2rem;
+  }
+
+  .button-list {
+    margin-top: 5rem;
+  }
+}
