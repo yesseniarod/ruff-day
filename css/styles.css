@@ -24,6 +24,10 @@ i.fas.fa-bars.hidden {
   background-color: #f3ffa7;
 }
 
+.homepage {
+  height: 100vh;
+}
+
 p {
   font-size: 1.5rem;
 }
@@ -42,4 +46,22 @@ button {
   background-color: #ffa755;
   font-family: 'Caveat Brush', cursive;
   font-size: 1.25rem;
+}
+
+.tailwags {
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.place-holder {
+  width: 75%;
+  height: 20rem;
+  background-color: aliceblue;
+}
+
+.hide {
+  display: none;
 }
