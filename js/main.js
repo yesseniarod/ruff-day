@@ -24,10 +24,8 @@ function getDogPicture() {
     var $img = document.createElement('img');
     $img.setAttribute('src', xhr.response.message);
     $placeHolder.appendChild($img);
-
   });
   xhr.send();
-
 }
 
 function greeting() {
