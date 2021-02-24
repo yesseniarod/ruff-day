@@ -53,18 +53,16 @@ button {
 }
 
 .place-holder {
-  width: 75%;
+  width: 90%;
   height: 20rem;
-  background-color: aliceblue;
-  border-radius: 0.5rem;
 }
 
 .hide {
-  display: none !important;
+  display: none;
 }
 
 img {
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   height: 20rem;
 }
