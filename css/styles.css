@@ -52,7 +52,6 @@ button {
 .place-holder,
 .quote-here {
   width: 90%;
-  height: 20rem;
 }
 
 .hide {
@@ -62,7 +61,7 @@ button {
 img {
   object-fit: contain;
   width: 100%;
-  height: 20rem;
+  max-height: 22rem;
 }
 
 .quote-here {
