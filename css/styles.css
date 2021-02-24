@@ -1,0 +1,64 @@
+body {
+  font-family: 'Caveat Brush', cursive;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  background-color: #8fedd6;
+}
+
+i.fas.fa-bars {
+  font-size: 2rem;
+}
+
+i.fas.fa-bars.hidden {
+  visibility: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 1.25rem;
+  background-color: #f3ffa7;
+}
+
+.button-list {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+button {
+  width: 15rem;
+  margin-top: 2rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: #ffa755;
+  font-family: 'Caveat Brush', cursive;
+  font-size: 1.25rem;
+}
+
+.tailwags {
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+}
+
+.place-holder {
+  width: 90%;
+  height: 20rem;
+}
+
+.hide {
+  display: none;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+  height: 20rem;
+}
