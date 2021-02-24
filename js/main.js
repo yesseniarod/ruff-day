@@ -5,6 +5,7 @@ var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
 var $stayPawsitive = document.querySelector('.stay-pawsitive');
+var $quoteHere = document.querySelector('.quote-here');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -35,6 +36,21 @@ function greeting() {
   $intro.appendChild($h2);
 }
 
+function getQuote() {
+  var xhr2 = new XMLHttpRequest();
+  xhr2.open('GET', 'https://api.quotable.io/random');
+  xhr2.responseType = 'json';
+  xhr2.addEventListener('load', function () {
+    var $h3 = document.createElement('h3');
+    $h3.textContent = xhr2.response.content;
+    $quoteHere.appendChild($h3);
+    var $p = document.createElement('p');
+    $p.textContent = '- ' + xhr2.response.author;
+    $quoteHere.appendChild($p);
+  });
+  xhr2.send();
+}
+
 $buttonList.addEventListener('click', function (event) {
   $homePage.classList.add('hide');
   $menuIcon.classList.remove('hidden');
@@ -44,5 +60,6 @@ $buttonList.addEventListener('click', function (event) {
     greeting();
   } else if (event.target.getAttribute('class') === 'quotes') {
     $stayPawsitive.classList.remove('hide');
+    getQuote();
   }
 });
