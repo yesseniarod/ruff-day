@@ -4,6 +4,7 @@ var $menuIcon = document.querySelector('.fas.fa-bars.hidden');
 var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
+var $stayPawsitive = document.querySelector('.stay-pawsitive');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -35,11 +36,13 @@ function greeting() {
 }
 
 $buttonList.addEventListener('click', function (event) {
+  $homePage.classList.add('hide');
+  $menuIcon.classList.remove('hidden');
   if (event.target.getAttribute('class') === 'pictures') {
     $tailWags.classList.remove('hide');
-    $homePage.classList.add('hide');
-    $menuIcon.classList.remove('hidden');
     getDogPicture();
     greeting();
+  } else if (event.target.getAttribute('class') === 'quotes') {
+    $stayPawsitive.classList.remove('hide');
   }
 });
