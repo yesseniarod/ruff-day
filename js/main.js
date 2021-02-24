@@ -7,10 +7,13 @@ var $intro = document.querySelector('.full-col.intro');
 
 var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
 
-var randomName = names[Math.floor(Math.random() * names.length)];
-
 var sayHi = ['Hi, ', 'Nice to meet you, ', 'Hello, ', 'Hey there, '];
-var randomGreeting = sayHi[Math.floor(Math.random() * sayHi.length)];
+
+function introduction() {
+  var randomName = names[Math.floor(Math.random() * names.length)];
+  var randomGreeting = sayHi[Math.floor(Math.random() * sayHi.length)];
+  return randomGreeting + 'my name is ' + randomName + '!';
+}
 
 function getDogPicture() {
   var xhr = new XMLHttpRequest();
@@ -28,7 +31,7 @@ function getDogPicture() {
 
 function greeting() {
   var $h2 = document.createElement('h2');
-  $h2.textContent = randomGreeting + 'my name is ' + randomName + '!';
+  $h2.textContent = introduction();
   $intro.appendChild($h2);
 }
 
