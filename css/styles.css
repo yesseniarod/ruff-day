@@ -24,10 +24,6 @@ i.fas.fa-bars.hidden {
   background-color: #f3ffa7;
 }
 
-p {
-  font-size: 1.5rem;
-}
-
 .button-list {
   display: flex;
   flex-direction: column;
