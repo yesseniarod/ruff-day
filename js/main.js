@@ -49,6 +49,12 @@ function getQuote() {
   xhr2.send();
 }
 
+$menuIcon.addEventListener('click', function (event) {
+  $homePage.classList.remove('hide');
+  $menuIcon.classList.add('hidden');
+  window.location.reload();
+});
+
 $buttonList.addEventListener('click', function (event) {
   $homePage.classList.add('hide');
   $menuIcon.classList.remove('hidden');
