@@ -1,6 +1,7 @@
 body {
   font-family: 'Caveat Brush', cursive;
-  overflow: hidden;
+
+  /* overflow: hidden; */
 }
 
 header {
@@ -49,7 +50,8 @@ button {
   text-align: center;
 }
 
-.place-holder {
+.place-holder,
+.quote-here {
   width: 90%;
   height: 20rem;
 }
@@ -62,4 +64,10 @@ img {
   object-fit: contain;
   width: 100%;
   height: 20rem;
+}
+
+.quote-here {
+  background-color: #8feded;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
 }
