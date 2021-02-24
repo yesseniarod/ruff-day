@@ -5,11 +5,10 @@ var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
 
-var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
-
-var sayHi = ['Hi, ', 'Nice to meet you, ', 'Hello, ', 'Hey there, '];
-
 function introduction() {
+  var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
+
+  var sayHi = ['Hi, ', 'Nice to meet you, ', 'Hello, ', 'Hey there, '];
   var randomName = names[Math.floor(Math.random() * names.length)];
   var randomGreeting = sayHi[Math.floor(Math.random() * sayHi.length)];
   return randomGreeting + 'my name is ' + randomName + '!';
