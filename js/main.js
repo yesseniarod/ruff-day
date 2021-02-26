@@ -7,6 +7,7 @@ var $intro = document.querySelector('.full-col.intro');
 var $stayPawsitive = document.querySelector('.stay-pawsitive');
 var $quoteHere = document.querySelector('.quote-here');
 var $form = document.querySelector('form');
+var $reflect = document.querySelector('.reflect');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -66,6 +67,8 @@ $buttonList.addEventListener('click', function (event) {
   } else if (event.target.getAttribute('class') === 'quotes') {
     $stayPawsitive.classList.remove('hide');
     getQuote();
+  } else if (event.target.getAttribute('class') === 'thoughts') {
+    $reflect.classList.remove('hide');
   }
 });
 
