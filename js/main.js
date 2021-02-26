@@ -81,23 +81,32 @@ $form.addEventListener('submit', function () {
   entry.entryId = data.nextEntryId;
   data.nextEntryId++;
   data.entries.unshift(entry);
-
+  // $ul.prepend(entriesList(entry));
   $form.reset();
 
 });
 
-// function entriesList(entry) {
-//   var $li = document.createElement('li');
+function entriesList(entry) {
+  var $li = document.createElement('li');
 
-//   var $div = document.createElement('div');
-//   $div.setAttribute('class', 'text');
-//   $li.appendChild($div);
+  var $div = document.createElement('div');
+  $div.setAttribute('class', 'text');
+  $li.appendChild($div);
 
-//   var $p = document.createElement('p');
-//   $p.setAttribute('class', 'input');
-//   $p.textContent = entry.reflect;
-//   $div.appendChild($p);
+  var $p = document.createElement('p');
+  $p.setAttribute('class', 'input');
+  $p.textContent = entry.reflect;
+  $div.appendChild($p);
 
-//   return $li;
+  return $li;
 
-// }
+}
+
+var $ul = document.querySelector('ul');
+
+document.addEventListener('DOMContentLoaded', function () {
+  for (var i = 0; i < data.entries.length; i++) {
+    var input = entriesList(data.entries[i]);
+    $ul.appendChild(input);
+  }
+});
