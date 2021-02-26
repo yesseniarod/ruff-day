@@ -72,7 +72,10 @@ $buttonList.addEventListener('click', function (event) {
 $form.addEventListener('submit', function () {
   event.preventDefault();
   // var entry = {
-  //   reflect: $form.elements.reflect.value
-  // };
+  //         reflect: $form.elements.reflect.value
+  //  };
+
+  //  entry.entryId = data.nextEntryId;
+  //  data.nextEntryId++;
 
 });
