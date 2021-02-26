@@ -105,3 +105,24 @@ button.save {
   width: 4rem;
   height: 2rem;
 }
+
+div.view-entry {
+  overflow: visible;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  background-color: white;
+  width: 100%;
+  height: 10rem;
+}
+
+p.input {
+  margin: 0.75rem;
+  padding-top: 0.5rem;
+}
