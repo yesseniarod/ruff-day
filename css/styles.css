@@ -79,3 +79,31 @@ p {
   margin-top: 4rem;
   font-size: 1.1rem;
 }
+
+.reflect {
+  height: 100vh;
+}
+
+form {
+  width: 75%;
+}
+
+label {
+  font-family: sans-serif;
+}
+
+textarea {
+  width: 100%;
+  height: 20rem;
+  margin-top: 0.5rem;
+}
+
+.save-button {
+  text-align: right;
+}
+
+button.save {
+  background-color: #8feded;
+  width: 4rem;
+  height: 2rem;
+}
