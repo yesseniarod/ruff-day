@@ -77,5 +77,6 @@ $form.addEventListener('submit', function () {
 
   entry.entryId = data.nextEntryId;
   data.nextEntryId++;
+  data.entries.unshift(entry);
 
 });
