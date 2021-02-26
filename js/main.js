@@ -6,6 +6,7 @@ var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
 var $stayPawsitive = document.querySelector('.stay-pawsitive');
 var $quoteHere = document.querySelector('.quote-here');
+var $form = document.querySelector('form');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -66,4 +67,12 @@ $buttonList.addEventListener('click', function (event) {
     $stayPawsitive.classList.remove('hide');
     getQuote();
   }
+});
+
+$form.addEventListener('submit', function () {
+  event.preventDefault();
+  // var entry = {
+  //   reflect: $form.elements.reflect.value
+  // };
+
 });
