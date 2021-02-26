@@ -88,6 +88,10 @@ form {
   width: 75%;
 }
 
+label {
+  font-family: sans-serif;
+}
+
 textarea {
   width: 100%;
   height: 20rem;
