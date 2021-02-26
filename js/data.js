@@ -1,6 +1,6 @@
 /* exported data */
-// var data = {
-//   entries: [],
-//   editing: null,
-//   nextEntryId: 1
-// };
+var data = {
+  entries: [],
+  editing: null,
+  nextEntryId: 1
+};
