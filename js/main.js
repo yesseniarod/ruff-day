@@ -85,3 +85,19 @@ $form.addEventListener('submit', function () {
   $form.reset();
 
 });
+
+// function entriesList(entry) {
+//   var $li = document.createElement('li');
+
+//   var $div = document.createElement('div');
+//   $div.setAttribute('class', 'text');
+//   $li.appendChild($div);
+
+//   var $p = document.createElement('p');
+//   $p.setAttribute('class', 'input');
+//   $p.textContent = entry.reflect;
+//   $div.appendChild($p);
+
+//   return $li;
+
+// }
