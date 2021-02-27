@@ -1,5 +1,6 @@
 body {
   font-family: 'Caveat Brush', cursive;
+  background-color: #f3ffa7;
 
   /* overflow: hidden; */
 }
@@ -22,7 +23,8 @@ i.fas.fa-bars.hidden {
   width: 100%;
   flex-direction: column;
   padding-top: 1.25rem;
-  background-color: #f3ffa7;
+
+  /* background-color: #f3ffa7; */
 }
 
 .button-list {
@@ -107,8 +109,13 @@ button.save {
   height: 2rem;
 }
 
-div.view-entry {
-  overflow: scroll;
+/* div.view-entry {
+   overflow: scroll;
+  width: 90%;
+} */
+
+.entry-here {
+  width: 80%;
 }
 
 ul {
@@ -122,6 +129,7 @@ ul {
   width: 90%;
   height: 10rem;
   margin: auto;
+  border-radius: 0.5rem;
 }
 
 p.input {
