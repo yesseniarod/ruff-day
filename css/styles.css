@@ -1,6 +1,7 @@
 body {
   font-family: 'Caveat Brush', cursive;
-  overflow: hidden;
+
+  /* overflow: hidden; */
 }
 
 header {
@@ -107,7 +108,7 @@ button.save {
 }
 
 div.view-entry {
-  overflow: visible;
+  overflow: scroll;
 }
 
 ul {

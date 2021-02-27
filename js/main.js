@@ -8,6 +8,7 @@ var $stayPawsitive = document.querySelector('.stay-pawsitive');
 var $quoteHere = document.querySelector('.quote-here');
 var $form = document.querySelector('form');
 var $reflect = document.querySelector('.reflect');
+var $viewEntry = document.querySelector('.view-entry');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -69,6 +70,8 @@ $buttonList.addEventListener('click', function (event) {
     getQuote();
   } else if (event.target.getAttribute('class') === 'thoughts') {
     $reflect.classList.remove('hide');
+  } else if (event.target.getAttribute('class') === 'entries') {
+    $viewEntry.classList.remove('hide');
   }
 });
 
@@ -81,7 +84,7 @@ $form.addEventListener('submit', function () {
   entry.entryId = data.nextEntryId;
   data.nextEntryId++;
   data.entries.unshift(entry);
-  // $ul.prepend(entriesList(entry));
+  $ul.prepend(entriesList(entry));
   $form.reset();
 
 });
