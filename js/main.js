@@ -113,3 +113,9 @@ document.addEventListener('DOMContentLoaded', function () {
     $ul.appendChild(input);
   }
 });
+
+var $saveButton = document.querySelector('.save');
+$saveButton.addEventListener('click', function () {
+  $reflect.classList.add('hide');
+  $viewEntry.classList.remove('hide');
+});
