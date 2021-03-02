@@ -111,6 +111,12 @@ function entriesList(entry) {
     $modal.classList.add('modal-active');
   });
 
+  // var $deleteButton = document.querySelector('.button-delete');
+  // $deleteButton.addEventListener('click', function () {
+
+  // });
+  // this addEventListener function will delete all of the li elements, needs to be moved elsewhere
+
   return $li;
 
 }
@@ -128,4 +134,9 @@ var $saveButton = document.querySelector('.save');
 $saveButton.addEventListener('click', function () {
   $reflect.classList.add('hide');
   $viewEntry.classList.remove('hide');
+});
+
+var $modalResponse = document.querySelector('.modal-response');
+$modalResponse.addEventListener('click', function () {
+  $modal.classList.remove('modal-active');
 });
