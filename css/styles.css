@@ -1,6 +1,6 @@
 body {
   font-family: 'Caveat Brush', cursive;
-  overflow: hidden;
+  background-color: #f3ffa7;
 }
 
 header {
@@ -21,7 +21,6 @@ i.fas.fa-bars.hidden {
   width: 100%;
   flex-direction: column;
   padding-top: 1.25rem;
-  background-color: #f3ffa7;
 }
 
 .button-list {
@@ -32,15 +31,17 @@ i.fas.fa-bars.hidden {
 
 button {
   width: 15rem;
-  margin-top: 2rem;
-  height: 4rem;
-  border-radius: 1rem;
+  margin-top: 1.5rem;
+  height: 2rem;
+  border-radius: 0.5rem;
   background-color: #ffa755;
   font-family: 'Caveat Brush', cursive;
   font-size: 1.25rem;
 }
 
 .tailwags,
+.reflect,
+.view-entry,
 .stay-pawsitive {
   height: 100vh;
 }
@@ -80,10 +81,6 @@ p {
   font-size: 1.1rem;
 }
 
-.reflect {
-  height: 100vh;
-}
-
 form {
   width: 75%;
 }
@@ -106,4 +103,27 @@ button.save {
   background-color: #8feded;
   width: 4rem;
   height: 2rem;
+}
+
+.entry-here {
+  width: 80%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  background-color: white;
+  width: 90%;
+  height: 10rem;
+  margin: auto;
+  border-radius: 0.5rem;
+}
+
+p.input {
+  margin: 0.75rem;
+  padding-top: 0.5rem;
 }

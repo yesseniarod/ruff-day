@@ -7,6 +7,8 @@ var $intro = document.querySelector('.full-col.intro');
 var $stayPawsitive = document.querySelector('.stay-pawsitive');
 var $quoteHere = document.querySelector('.quote-here');
 var $form = document.querySelector('form');
+var $reflect = document.querySelector('.reflect');
+var $viewEntry = document.querySelector('.view-entry');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -66,6 +68,10 @@ $buttonList.addEventListener('click', function (event) {
   } else if (event.target.getAttribute('class') === 'quotes') {
     $stayPawsitive.classList.remove('hide');
     getQuote();
+  } else if (event.target.getAttribute('class') === 'thoughts') {
+    $reflect.classList.remove('hide');
+  } else if (event.target.getAttribute('class') === 'entries') {
+    $viewEntry.classList.remove('hide');
   }
 });
 
@@ -78,7 +84,38 @@ $form.addEventListener('submit', function () {
   entry.entryId = data.nextEntryId;
   data.nextEntryId++;
   data.entries.unshift(entry);
-
+  $ul.prepend(entriesList(entry));
   $form.reset();
 
+});
+
+function entriesList(entry) {
+  var $li = document.createElement('li');
+
+  var $div = document.createElement('div');
+  $div.setAttribute('class', 'text');
+  $li.appendChild($div);
+
+  var $p = document.createElement('p');
+  $p.setAttribute('class', 'input');
+  $p.textContent = entry.reflect;
+  $div.appendChild($p);
+
+  return $li;
+
+}
+
+var $ul = document.querySelector('ul');
+
+document.addEventListener('DOMContentLoaded', function () {
+  for (var i = 0; i < data.entries.length; i++) {
+    var input = entriesList(data.entries[i]);
+    $ul.appendChild(input);
+  }
+});
+
+var $saveButton = document.querySelector('.save');
+$saveButton.addEventListener('click', function () {
+  $reflect.classList.add('hide');
+  $viewEntry.classList.remove('hide');
 });
