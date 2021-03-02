@@ -9,6 +9,7 @@ var $quoteHere = document.querySelector('.quote-here');
 var $form = document.querySelector('form');
 var $reflect = document.querySelector('.reflect');
 var $viewEntry = document.querySelector('.view-entry');
+var $modal = document.querySelector('.modal');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -105,6 +106,10 @@ function entriesList(entry) {
   $anchor.setAttribute('href', '#');
   $anchor.textContent = 'delete';
   $li.appendChild($anchor);
+
+  $anchor.addEventListener('click', function () {
+    $modal.classList.add('modal-active');
+  });
 
   return $li;
 
