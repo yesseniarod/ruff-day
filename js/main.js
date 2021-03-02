@@ -101,6 +101,11 @@ function entriesList(entry) {
   $p.textContent = entry.reflect;
   $div.appendChild($p);
 
+  var $anchor = document.createElement('a');
+  $anchor.setAttribute('href', '#');
+  $anchor.textContent = 'delete';
+  $li.appendChild($anchor);
+
   return $li;
 
 }

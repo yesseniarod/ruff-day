@@ -127,3 +127,10 @@ p.input {
   margin: 0.75rem;
   padding-top: 0.5rem;
 }
+
+a {
+  display: flex;
+  justify-content: flex-end;
+  color: red;
+  padding-right: 0.75rem;
+}
