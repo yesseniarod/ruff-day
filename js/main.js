@@ -57,23 +57,33 @@ function getQuote() {
 $menuIcon.addEventListener('click', function (event) {
   $homePage.classList.remove('hide');
   $menuIcon.classList.add('hidden');
+  $tailWags.classList.add('hide');
+  $stayPawsitive.classList.add('hide');
+  $reflect.classList.add('hide');
+  $viewEntry.classList.add('hide');
   window.location.reload();
 });
 
 $buttonList.addEventListener('click', function (event) {
   $homePage.classList.add('hide');
-  $menuIcon.classList.remove('hidden');
+
   if (event.target.getAttribute('class') === 'pictures') {
     $tailWags.classList.remove('hide');
+    $menuIcon.classList.remove('hidden');
     getDogPicture();
     greeting();
   } else if (event.target.getAttribute('class') === 'quotes') {
     $stayPawsitive.classList.remove('hide');
+    $menuIcon.classList.remove('hidden');
     getQuote();
   } else if (event.target.getAttribute('class') === 'thoughts') {
     $reflect.classList.remove('hide');
+    $menuIcon.classList.remove('hidden');
   } else if (event.target.getAttribute('class') === 'entries') {
     $viewEntry.classList.remove('hide');
+    $menuIcon.classList.remove('hidden');
+  } else {
+    $homePage.classList.remove('hide');
   }
 });
 
