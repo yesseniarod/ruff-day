@@ -47,4 +47,12 @@
   .button-list {
     margin-top: 5rem;
   }
+
+  a {
+    margin-right: 4rem;
+  }
+
+  div.open-modal {
+    width: 30%;
+  }
 }

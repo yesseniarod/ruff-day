@@ -9,6 +9,8 @@ var $quoteHere = document.querySelector('.quote-here');
 var $form = document.querySelector('form');
 var $reflect = document.querySelector('.reflect');
 var $viewEntry = document.querySelector('.view-entry');
+var $modal = document.querySelector('.modal');
+var $deleteButton = document.querySelector('.button-delete');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -89,8 +91,11 @@ $form.addEventListener('submit', function () {
 
 });
 
+$deleteButton.addEventListener('click', deleteEntry);
+
 function entriesList(entry) {
   var $li = document.createElement('li');
+  $li.setAttribute('data-id', entry.entryId);
 
   var $div = document.createElement('div');
   $div.setAttribute('class', 'text');
@@ -101,8 +106,27 @@ function entriesList(entry) {
   $p.textContent = entry.reflect;
   $div.appendChild($p);
 
-  return $li;
+  var $anchor = document.createElement('a');
+  $anchor.setAttribute('href', '#');
+  $anchor.textContent = 'delete';
+  $li.appendChild($anchor);
 
+  $anchor.addEventListener('click', function () {
+    $modal.classList.add('modal-active');
+    var $li = event.target.closest('li');
+    data.deleteId = parseInt($li.dataset.id);
+  });
+
+  return $li;
+}
+
+function deleteEntry(event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    if (data.entries[i].entryId === data.deleteId) {
+      data.entries.splice(i, 1);
+      document.querySelector('[data-id="' + data.deleteId + '"]').remove();
+    }
+  }
 }
 
 var $ul = document.querySelector('ul');
@@ -118,4 +142,9 @@ var $saveButton = document.querySelector('.save');
 $saveButton.addEventListener('click', function () {
   $reflect.classList.add('hide');
   $viewEntry.classList.remove('hide');
+});
+
+var $modalResponse = document.querySelector('.modal-response');
+$modalResponse.addEventListener('click', function () {
+  $modal.classList.remove('modal-active');
 });
