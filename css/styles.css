@@ -12,6 +12,10 @@ i.fas.fa-bars {
   font-size: 2rem;
 }
 
+i.fas.fa-bars:hover {
+  cursor: pointer;
+}
+
 i.fas.fa-bars.hidden {
   visibility: hidden;
 }
@@ -26,7 +30,6 @@ i.fas.fa-bars.hidden {
 .button-list {
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 button {
@@ -37,6 +40,11 @@ button {
   background-color: #ffa755;
   font-family: 'Caveat Brush', cursive;
   font-size: 1.25rem;
+}
+
+button:hover {
+  background-color: darkorange;
+  cursor: pointer;
 }
 
 .tailwags,
@@ -178,6 +186,16 @@ a {
   background-color: tomato;
 }
 
+.button-cancel:hover {
+  background-color: black;
+  color: tomato;
+}
+
 .button-delete {
   background-color: lightgreen;
+}
+
+.button-delete:hover {
+  background-color: black;
+  color: lightgreen;
 }
