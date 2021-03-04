@@ -37,7 +37,6 @@
 
 @media screen and (min-width: 768px) {
   .half-col.left {
-    margin-left: 6rem;
     margin-top: 2rem;
   }
 
@@ -46,7 +45,6 @@
   }
 
   .half-col.right {
-    margin-right: 6rem;
     margin-top: 2rem;
   }
 
@@ -60,5 +58,12 @@
 
   div.open-modal {
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .homepage {
+    width: 60%;
+    margin: 1.75rem auto;
   }
 }

@@ -1,6 +1,6 @@
 var $buttonList = document.querySelector('.button-list');
 var $homePage = document.querySelector('.homepage');
-var $menuIcon = document.querySelector('.fas.fa-bars.hidden');
+var $menuIcon = document.querySelector('.fas.fa-home.hidden');
 var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
@@ -11,6 +11,8 @@ var $reflect = document.querySelector('.reflect');
 var $viewEntry = document.querySelector('.view-entry');
 var $modal = document.querySelector('.modal');
 var $deleteButton = document.querySelector('.button-delete');
+var $spinner1 = document.querySelector('div.spinner');
+var $spinner2 = document.querySelector('div.spinner2');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -25,7 +27,9 @@ function getDogPicture() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
   xhr.responseType = 'json';
+  $spinner1.classList.remove('hide');
   xhr.addEventListener('load', function () {
+    $spinner1.classList.add('hide');
     var $img = document.createElement('img');
     $img.setAttribute('src', xhr.response.message);
     $placeHolder.appendChild($img);
@@ -43,7 +47,10 @@ function getQuote() {
   var xhr2 = new XMLHttpRequest();
   xhr2.open('GET', 'https://api.quotable.io/random');
   xhr2.responseType = 'json';
+  $spinner2.classList.remove('hide');
   xhr2.addEventListener('load', function () {
+    $spinner2.classList.add('hide');
+    $quoteHere.classList.remove('hide');
     var $h3 = document.createElement('h3');
     $h3.textContent = xhr2.response.content;
     $quoteHere.appendChild($h3);

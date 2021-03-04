@@ -8,15 +8,15 @@ header {
   background-color: #8fedd6;
 }
 
-i.fas.fa-bars {
+i.fas.fa-home {
   font-size: 2rem;
 }
 
-i.fas.fa-bars:hover {
+i.fas.fa-home:hover {
   cursor: pointer;
 }
 
-i.fas.fa-bars.hidden {
+i.fas.fa-home.hidden {
   visibility: hidden;
 }
 
@@ -73,11 +73,17 @@ img {
   max-height: 22rem;
 }
 
+.spinner,
+.spinner2 {
+  width: 5rem;
+  margin: 5rem auto;
+}
+
 .quote-here {
-  background-color: #8feded;
   margin: 2rem auto;
   border-radius: 0.5rem;
   padding: 2rem 3.5rem 1rem;
+  background-color: #8feded;
 }
 
 h3 {
