@@ -73,11 +73,17 @@ img {
   max-height: 22rem;
 }
 
+.spinner,
+.spinner2 {
+  width: 5rem;
+  margin: 5rem auto;
+}
+
 .quote-here {
-  background-color: #8feded;
   margin: 2rem auto;
   border-radius: 0.5rem;
   padding: 2rem 3.5rem 1rem;
+  background-color: #8feded;
 }
 
 h3 {
