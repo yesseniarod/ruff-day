@@ -8,15 +8,15 @@ header {
   background-color: #8fedd6;
 }
 
-i.fas.fa-bars {
+i.fas.fa-home {
   font-size: 2rem;
 }
 
-i.fas.fa-bars:hover {
+i.fas.fa-home:hover {
   cursor: pointer;
 }
 
-i.fas.fa-bars.hidden {
+i.fas.fa-home.hidden {
   visibility: hidden;
 }
 

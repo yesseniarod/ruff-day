@@ -1,6 +1,6 @@
 var $buttonList = document.querySelector('.button-list');
 var $homePage = document.querySelector('.homepage');
-var $menuIcon = document.querySelector('.fas.fa-bars.hidden');
+var $menuIcon = document.querySelector('.fas.fa-home.hidden');
 var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');

@@ -62,3 +62,13 @@
     width: 30%;
   }
 }
+
+@media screen and (min-width: 1440px) {
+  div.half-col.left {
+    margin-left: 12rem;
+  }
+
+  div.half-col.right {
+    margin-right: 10rem;
+  }
+}
