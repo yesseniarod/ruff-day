@@ -64,12 +64,8 @@
 }
 
 @media screen and (min-width: 1440px) {
-  div.half-col.left {
-    width: 40%;
-    text-align: center;
-  }
-
-  div.half-col.right {
-    width: 80%;
+  .homepage {
+    width: 60%;
+    margin: 1.75rem auto;
   }
 }
