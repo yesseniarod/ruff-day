@@ -65,10 +65,11 @@
 
 @media screen and (min-width: 1440px) {
   div.half-col.left {
-    margin-left: 18rem;
+    width: 40%;
+    text-align: center;
   }
 
   div.half-col.right {
-    margin-right: 15rem;
+    width: 80%;
   }
 }
