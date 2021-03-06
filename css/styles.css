@@ -1,6 +1,7 @@
 body {
-  font-family: 'Caveat Brush', cursive;
-  background-color: #f3ffa7;
+  /* font-family: 'Caveat Brush', cursive; */
+  font-family: 'Crete Round', serif;
+  background-color: #e5e5e5;
 }
 
 header {
@@ -37,14 +38,17 @@ button {
   margin-top: 1.5rem;
   height: 2rem;
   border-radius: 0.5rem;
-  background-color: #ffa755;
-  font-family: 'Caveat Brush', cursive;
+  background-color: #7f7caf;
+
+  /* font-family: 'Caveat Brush', cursive; */
+  font-family: 'Crete Round', serif;
   font-size: 1.25rem;
 }
 
 button:hover {
-  background-color: darkorange;
+  /* background-color: #615D98; */
   cursor: pointer;
+  color: white;
 }
 
 .tailwags,
@@ -83,16 +87,21 @@ img {
   margin: 2rem auto;
   border-radius: 0.5rem;
   padding: 2rem 3.5rem 1rem;
-  background-color: #8feded;
+
+  /* background-color: #8feded; */
+  background-color: white;
+  box-shadow: 0.6rem 0.3rem 0.3rem #7f7caf;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 p {
   margin-top: 4rem;
   font-size: 1.1rem;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 form {
@@ -101,7 +110,8 @@ form {
 
 .verify,
 label {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: 'ABeeZee', sans-serif;
 }
 
 textarea {
@@ -115,13 +125,15 @@ textarea {
 }
 
 button.save {
-  background-color: #8feded;
+  /* background-color: #8feded; */
+  background-color: #7f7caf;
   width: 4rem;
   height: 2rem;
 }
 
 .entry-here {
   width: 80%;
+  height: auto;
 }
 
 ul {
@@ -136,6 +148,7 @@ ul {
   height: 10rem;
   margin: auto;
   border-radius: 0.5rem;
+  box-shadow: 0.6rem 0.3rem 0.3rem #7f7caf;
 }
 
 p.input {
@@ -188,7 +201,7 @@ a {
   font-size: 1rem;
 }
 
-.button-cancel {
+/* .button-cancel {
   background-color: tomato;
 }
 
@@ -204,4 +217,4 @@ a {
 .button-delete:hover {
   background-color: black;
   color: lightgreen;
-}
+} */
