@@ -18,7 +18,7 @@ A web application that generates inspirational quotes, dog pictures, and allows 
 
 
 ## Live Demo 
-Try the application https://yesseniarod.github.io/ajax-project/
+Try the application https://yesseniarod.github.io/ruff-day/
 
 ## Preview 
 ![RuffDays](https://user-images.githubusercontent.com/74885918/110041951-cfcdbd00-7cf9-11eb-8ddc-f4a497488123.gif)
