@@ -1,6 +1,6 @@
 var $buttonList = document.querySelector('.button-list');
 var $homePage = document.querySelector('.homepage');
-var $menuIcon = document.querySelector('.fas.fa-home.home-icon.hidden');
+var $homeIcon = document.querySelector('.fas.fa-home.home-icon.hidden');
 var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
@@ -101,9 +101,9 @@ function changeQuote() {
   xhr2.send();
 }
 
-$menuIcon.addEventListener('click', function (event) {
+$homeIcon.addEventListener('click', function (event) {
   $homePage.classList.remove('hide');
-  $menuIcon.classList.add('hidden');
+  $homeIcon.classList.add('hidden');
   $tailWags.classList.add('hide');
   $stayPawsitive.classList.add('hide');
   $reflect.classList.add('hide');
@@ -126,19 +126,19 @@ $buttonList.addEventListener('click', function (event) {
 
   if (event.target.getAttribute('class') === 'pictures') {
     $tailWags.classList.remove('hide');
-    $menuIcon.classList.remove('hidden');
+    $homeIcon.classList.remove('hidden');
     getDogPicture();
     greeting();
   } else if (event.target.getAttribute('class') === 'quotes') {
     $stayPawsitive.classList.remove('hide');
-    $menuIcon.classList.remove('hidden');
+    $homeIcon.classList.remove('hidden');
     getQuote();
   } else if (event.target.getAttribute('class') === 'thoughts') {
     $reflect.classList.remove('hide');
-    $menuIcon.classList.remove('hidden');
+    $homeIcon.classList.remove('hidden');
   } else if (event.target.getAttribute('class') === 'entries') {
     $viewEntry.classList.remove('hide');
-    $menuIcon.classList.remove('hidden');
+    $homeIcon.classList.remove('hidden');
   } else {
     $homePage.classList.remove('hide');
   }
@@ -175,7 +175,6 @@ function entriesList(entry) {
 
   var $anchor = document.createElement('a');
   $anchor.setAttribute('href', '#');
-  // $anchor.textContent = 'delete';
   $li.appendChild($anchor);
 
   var $trash = document.createElement('i');
