@@ -1,6 +1,6 @@
 var $buttonList = document.querySelector('.button-list');
 var $homePage = document.querySelector('.homepage');
-var $menuIcon = document.querySelector('.fas.fa-home.hidden');
+var $menuIcon = document.querySelector('.fas.fa-home.home-icon.hidden');
 var $placeHolder = document.querySelector('.place-holder');
 var $tailWags = document.querySelector('.tailwags');
 var $intro = document.querySelector('.full-col.intro');
@@ -13,6 +13,8 @@ var $modal = document.querySelector('.modal');
 var $deleteButton = document.querySelector('.button-delete');
 var $spinner1 = document.querySelector('div.spinner');
 var $spinner2 = document.querySelector('div.spinner2');
+var $more = document.querySelector('.more');
+var $moreQuotes = document.querySelector('.more-quotes');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -23,6 +25,8 @@ function introduction() {
   return randomGreeting + 'my name is ' + randomName + '!';
 }
 
+var $img = document.createElement('img');
+
 function getDogPicture() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
@@ -30,18 +34,38 @@ function getDogPicture() {
   $spinner1.classList.remove('hide');
   xhr.addEventListener('load', function () {
     $spinner1.classList.add('hide');
-    var $img = document.createElement('img');
     $img.setAttribute('src', xhr.response.message);
     $placeHolder.appendChild($img);
   });
   xhr.send();
 }
 
+function changeDogPicture() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
+  xhr.responseType = 'json';
+  $spinner1.classList.remove('hide');
+  xhr.addEventListener('load', function () {
+    $spinner1.classList.add('hide');
+    $img.setAttribute('src', xhr.response.message);
+    $placeHolder.classList.remove('hide');
+  });
+  xhr.send();
+}
+
+var $h2 = document.createElement('h2');
+
 function greeting() {
-  var $h2 = document.createElement('h2');
   $h2.textContent = introduction();
   $intro.appendChild($h2);
 }
+
+function changeGreeting() {
+  $h2.textContent = introduction();
+}
+
+var $quoteHeading = document.createElement('h3');
+var $quoteParagraph = document.createElement('p');
 
 function getQuote() {
   var xhr2 = new XMLHttpRequest();
@@ -51,12 +75,28 @@ function getQuote() {
   xhr2.addEventListener('load', function () {
     $spinner2.classList.add('hide');
     $quoteHere.classList.remove('hide');
-    var $h3 = document.createElement('h3');
-    $h3.textContent = xhr2.response.content;
-    $quoteHere.appendChild($h3);
-    var $p = document.createElement('p');
-    $p.textContent = '- ' + xhr2.response.author;
-    $quoteHere.appendChild($p);
+
+    $quoteHeading.textContent = xhr2.response.content;
+    $quoteHere.appendChild($quoteHeading);
+
+    $quoteParagraph.textContent = '- ' + xhr2.response.author;
+    $quoteHere.appendChild($quoteParagraph);
+  });
+  xhr2.send();
+}
+
+function changeQuote() {
+  var xhr2 = new XMLHttpRequest();
+  xhr2.open('GET', 'https://api.quotable.io/random');
+  xhr2.responseType = 'json';
+  $spinner2.classList.remove('hide');
+  xhr2.addEventListener('load', function () {
+    $spinner2.classList.add('hide');
+    $quoteHere.classList.remove('hide');
+    $quoteHeading.textContent = xhr2.response.content;
+    $quoteHere.appendChild($quoteHeading);
+    $quoteParagraph.textContent = '- ' + xhr2.response.author;
+    $quoteHere.appendChild($quoteParagraph);
   });
   xhr2.send();
 }
@@ -68,7 +108,18 @@ $menuIcon.addEventListener('click', function (event) {
   $stayPawsitive.classList.add('hide');
   $reflect.classList.add('hide');
   $viewEntry.classList.add('hide');
-  window.location.reload();
+  // window.location.reload();
+});
+
+$more.addEventListener('click', function (event) {
+  $placeHolder.classList.add('hide');
+  changeDogPicture();
+  changeGreeting();
+});
+
+$moreQuotes.addEventListener('click', function (event) {
+  $quoteHere.classList.add('hide');
+  changeQuote();
 });
 
 $buttonList.addEventListener('click', function (event) {
@@ -125,8 +176,12 @@ function entriesList(entry) {
 
   var $anchor = document.createElement('a');
   $anchor.setAttribute('href', '#');
-  $anchor.textContent = 'delete';
+  // $anchor.textContent = 'delete';
   $li.appendChild($anchor);
+
+  var $trash = document.createElement('i');
+  $trash.setAttribute('class', 'fas fa-trash-alt');
+  $anchor.appendChild($trash);
 
   $anchor.addEventListener('click', function () {
     $modal.classList.add('modal-active');

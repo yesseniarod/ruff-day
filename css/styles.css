@@ -9,15 +9,15 @@ header {
   background-color: #8fedd6;
 }
 
-i.fas.fa-home {
+.home-icon {
   font-size: 2rem;
 }
 
-i.fas.fa-home:hover {
+.home-icon:hover {
   cursor: pointer;
 }
 
-i.fas.fa-home.hidden {
+.home-icon.hidden {
   visibility: hidden;
 }
 
@@ -100,7 +100,7 @@ h3 {
 
 p {
   margin-top: 4rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: 'ABeeZee', sans-serif;
 }
 
@@ -142,25 +142,32 @@ ul {
   padding: 0;
 }
 
+li {
+  margin-top: 0.5rem;
+}
+
 .text {
   background-color: white;
   width: 90%;
-  height: 10rem;
-  margin: auto;
+  height: auto;
+  margin: 0 auto 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0.6rem 0.3rem 0.3rem #7f7caf;
+  padding-bottom: 0.5rem;
 }
 
 p.input {
   margin: 0.75rem;
   padding-top: 0.5rem;
+  white-space: pre-line;
 }
 
 a {
   display: flex;
   justify-content: flex-end;
-  color: red;
-  padding-right: 0.75rem;
+
+  /* color: red; */
+  padding-right: 1rem;
 }
 
 .modal {
