@@ -21,4 +21,5 @@ A web application that generates inspirational quotes, dog pictures, and allows 
 Try the application https://yesseniarod.github.io/ruff-day/
 
 ## Preview 
-![RuffDays](https://user-images.githubusercontent.com/74885918/110041951-cfcdbd00-7cf9-11eb-8ddc-f4a497488123.gif)
+![ruff-day-gif](https://user-images.githubusercontent.com/74885918/115797619-2f0a8e00-a389-11eb-9ff7-29a613440560.gif)
+
