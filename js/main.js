@@ -108,7 +108,6 @@ $menuIcon.addEventListener('click', function (event) {
   $stayPawsitive.classList.add('hide');
   $reflect.classList.add('hide');
   $viewEntry.classList.add('hide');
-  // window.location.reload();
 });
 
 $more.addEventListener('click', function (event) {
