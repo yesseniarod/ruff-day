@@ -85,6 +85,7 @@ function getQuote() {
   xhr2.send();
 }
 
+
 function changeQuote() {
   var xhr2 = new XMLHttpRequest();
   xhr2.open('GET', 'https://api.quotable.io/random');
