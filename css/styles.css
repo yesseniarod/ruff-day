@@ -1,6 +1,6 @@
 body {
-  font-family: 'Caveat Brush', cursive;
-  background-color: #f3ffa7;
+  font-family: 'Crete Round', serif;
+  background-color: #e5e5e5;
 }
 
 header {
@@ -8,15 +8,15 @@ header {
   background-color: #8fedd6;
 }
 
-i.fas.fa-home {
+.home-icon {
   font-size: 2rem;
 }
 
-i.fas.fa-home:hover {
+.home-icon:hover {
   cursor: pointer;
 }
 
-i.fas.fa-home.hidden {
+.home-icon.hidden {
   visibility: hidden;
 }
 
@@ -27,9 +27,14 @@ i.fas.fa-home.hidden {
   padding-top: 1.25rem;
 }
 
+h2 {
+  font-size: 1.2rem;
+}
+
 .button-list {
   display: flex;
   flex-direction: column;
+  margin-top: 3.5rem;
 }
 
 button {
@@ -37,14 +42,9 @@ button {
   margin-top: 1.5rem;
   height: 2rem;
   border-radius: 0.5rem;
-  background-color: #ffa755;
-  font-family: 'Caveat Brush', cursive;
+  background-color: #7f7caf;
+  font-family: 'Crete Round', serif;
   font-size: 1.25rem;
-}
-
-button:hover {
-  background-color: darkorange;
-  cursor: pointer;
 }
 
 .tailwags,
@@ -83,16 +83,19 @@ img {
   margin: 2rem auto;
   border-radius: 0.5rem;
   padding: 2rem 3.5rem 1rem;
-  background-color: #8feded;
+  background-color: white;
+  box-shadow: 0.6rem 0.3rem 0.3rem #7f7caf;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 p {
   margin-top: 4rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 form {
@@ -101,7 +104,7 @@ form {
 
 .verify,
 label {
-  font-family: sans-serif;
+  font-family: 'ABeeZee', sans-serif;
 }
 
 textarea {
@@ -115,13 +118,14 @@ textarea {
 }
 
 button.save {
-  background-color: #8feded;
+  background-color: #7f7caf;
   width: 4rem;
   height: 2rem;
 }
 
 .entry-here {
   width: 80%;
+  height: auto;
 }
 
 ul {
@@ -130,24 +134,30 @@ ul {
   padding: 0;
 }
 
+li {
+  margin-top: 0.5rem;
+}
+
 .text {
   background-color: white;
   width: 90%;
-  height: 10rem;
-  margin: auto;
+  height: auto;
+  margin: 0 auto 0.5rem;
   border-radius: 0.5rem;
+  box-shadow: 0.6rem 0.3rem 0.3rem #7f7caf;
+  padding-bottom: 0.5rem;
 }
 
 p.input {
   margin: 0.75rem;
   padding-top: 0.5rem;
+  white-space: pre-line;
 }
 
 a {
   display: flex;
   justify-content: flex-end;
-  color: red;
-  padding-right: 0.75rem;
+  padding-right: 1rem;
 }
 
 .modal {
@@ -186,22 +196,4 @@ a {
   width: 5rem;
   font-family: sans-serif;
   font-size: 1rem;
-}
-
-.button-cancel {
-  background-color: tomato;
-}
-
-.button-cancel:hover {
-  background-color: black;
-  color: tomato;
-}
-
-.button-delete {
-  background-color: lightgreen;
-}
-
-.button-delete:hover {
-  background-color: black;
-  color: lightgreen;
 }
