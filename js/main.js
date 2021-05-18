@@ -16,6 +16,10 @@ var $spinner2 = document.querySelector('div.spinner2');
 var $more = document.querySelector('.more');
 var $moreQuotes = document.querySelector('.more-quotes');
 var $entriesPage = document.querySelector('.entries-page');
+var $close = document.querySelector('.button-close');
+var $error = document.querySelector('.error-modal');
+var $error2 = document.querySelector('.error-modal2');
+var $close2 = document.querySelector('.button-close-modal');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -27,9 +31,9 @@ function introduction() {
 }
 
 var $img = document.createElement('img');
+var xhr = new XMLHttpRequest();
 
 function getDogPicture() {
-  var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
   xhr.responseType = 'json';
   $spinner1.classList.remove('hide');
@@ -39,10 +43,17 @@ function getDogPicture() {
     $placeHolder.appendChild($img);
   });
   xhr.send();
+  xhr.addEventListener('error', function () {
+    var $error = document.querySelector('.error-modal');
+    $spinner1.classList.add('hide');
+    $error.classList.add('modal-active');
+    $intro.classList.add('hide');
+    $placeHolder.classList.add('hide');
+    $more.classList.add('hide');
+  });
 }
 
 function changeDogPicture() {
-  var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
   xhr.responseType = 'json';
   $spinner1.classList.remove('hide');
@@ -53,6 +64,14 @@ function changeDogPicture() {
   });
   xhr.send();
 }
+
+$close.addEventListener('click', function () {
+  $error.classList.remove('modal-active');
+});
+
+$close2.addEventListener('click', function () {
+  $error2.classList.remove('modal-active');
+});
 
 var $h2 = document.createElement('h2');
 
@@ -67,9 +86,9 @@ function changeGreeting() {
 
 var $quoteHeading = document.createElement('h3');
 var $quoteParagraph = document.createElement('p');
+var xhr2 = new XMLHttpRequest();
 
 function getQuote() {
-  var xhr2 = new XMLHttpRequest();
   xhr2.open('GET', 'https://api.quotable.io/random');
   xhr2.responseType = 'json';
   $spinner2.classList.remove('hide');
@@ -84,10 +103,17 @@ function getQuote() {
     $quoteHere.appendChild($quoteParagraph);
   });
   xhr2.send();
+  xhr2.addEventListener('error', function () {
+    $spinner2.classList.add('hide');
+    var $error2 = document.querySelector('.error-modal2');
+    $error2.classList.add('modal-active');
+    $intro.classList.add('hide');
+    $quoteHere.classList.add('hide');
+    $moreQuotes.classList.add('hide');
+  });
 }
 
 function changeQuote() {
-  var xhr2 = new XMLHttpRequest();
   xhr2.open('GET', 'https://api.quotable.io/random');
   xhr2.responseType = 'json';
   $spinner2.classList.remove('hide');
@@ -100,6 +126,13 @@ function changeQuote() {
     $quoteHere.appendChild($quoteParagraph);
   });
   xhr2.send();
+  xhr2.addEventListener('error', function () {
+    $spinner2.classList.add('hide');
+    $error2.classList.add('modal-active');
+    $intro.classList.add('hide');
+    $quoteHere.classList.add('hide');
+    $moreQuotes.classList.add('hide');
+  });
 }
 
 $homeIcon.addEventListener('click', function (event) {
