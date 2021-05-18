@@ -15,6 +15,7 @@ var $spinner1 = document.querySelector('div.spinner');
 var $spinner2 = document.querySelector('div.spinner2');
 var $more = document.querySelector('.more');
 var $moreQuotes = document.querySelector('.more-quotes');
+var $entriesPage = document.querySelector('.entries-page');
 
 function introduction() {
   var names = ['Bella', 'Luna', 'Charlie', 'Lucy', 'Cooper', 'Max', 'Bailey', 'Daisy', 'Sadie', 'Maggie', 'Rocco', 'Lucky', 'Dozer'];
@@ -84,7 +85,6 @@ function getQuote() {
   });
   xhr2.send();
 }
-
 
 function changeQuote() {
   var xhr2 = new XMLHttpRequest();
@@ -218,4 +218,16 @@ $saveButton.addEventListener('click', function () {
 var $modalResponse = document.querySelector('.modal-response');
 $modalResponse.addEventListener('click', function () {
   $modal.classList.remove('modal-active');
+});
+
+$entriesPage.addEventListener('click', function () {
+  $reflect.classList.add('hide');
+  $viewEntry.classList.remove('hide');
+
+});
+
+var $reflectPage = document.querySelector('.reflect-page');
+$reflectPage.addEventListener('click', function () {
+  $viewEntry.classList.add('hide');
+  $reflect.classList.remove('hide');
 });
