@@ -37,19 +37,22 @@ function getDogPicture() {
   xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
   xhr.responseType = 'json';
   $spinner1.classList.remove('hide');
+  $intro.classList.add('hide');
+  $placeHolder.classList.add('hide');
+  $more.classList.add('hide');
   xhr.addEventListener('load', function () {
     $spinner1.classList.add('hide');
     $img.setAttribute('src', xhr.response.message);
     $placeHolder.appendChild($img);
+    $intro.classList.remove('hide');
+    $placeHolder.classList.remove('hide');
+    $more.classList.remove('hide');
   });
   xhr.send();
   xhr.addEventListener('error', function () {
     var $error = document.querySelector('.error-modal');
     $spinner1.classList.add('hide');
     $error.classList.add('modal-active');
-    $intro.classList.add('hide');
-    $placeHolder.classList.add('hide');
-    $more.classList.add('hide');
   });
 }
 
@@ -57,12 +60,23 @@ function changeDogPicture() {
   xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
   xhr.responseType = 'json';
   $spinner1.classList.remove('hide');
+  $intro.classList.add('hide');
+  $placeHolder.classList.add('hide');
+  $more.classList.add('hide');
   xhr.addEventListener('load', function () {
     $spinner1.classList.add('hide');
     $img.setAttribute('src', xhr.response.message);
     $placeHolder.classList.remove('hide');
+    $intro.classList.remove('hide');
+    $placeHolder.classList.remove('hide');
+    $more.classList.remove('hide');
   });
   xhr.send();
+  xhr.addEventListener('error', function () {
+    var $error = document.querySelector('.error-modal');
+    $spinner1.classList.add('hide');
+    $error.classList.add('modal-active');
+  });
 }
 
 $close.addEventListener('click', function () {
@@ -71,6 +85,11 @@ $close.addEventListener('click', function () {
 
 $close2.addEventListener('click', function () {
   $error2.classList.remove('modal-active');
+});
+
+window.addEventListener('online', function () {
+  getDogPicture();
+  getQuote();
 });
 
 var $h2 = document.createElement('h2');
@@ -92,6 +111,9 @@ function getQuote() {
   xhr2.open('GET', 'https://api.quotable.io/random');
   xhr2.responseType = 'json';
   $spinner2.classList.remove('hide');
+  $intro.classList.add('hide');
+  $quoteHere.classList.add('hide');
+  $moreQuotes.classList.add('hide');
   xhr2.addEventListener('load', function () {
     $spinner2.classList.add('hide');
     $quoteHere.classList.remove('hide');
@@ -101,15 +123,15 @@ function getQuote() {
 
     $quoteParagraph.textContent = '- ' + xhr2.response.author;
     $quoteHere.appendChild($quoteParagraph);
+    $intro.classList.remove('hide');
+    $quoteHere.classList.remove('hide');
+    $moreQuotes.classList.remove('hide');
   });
   xhr2.send();
   xhr2.addEventListener('error', function () {
     $spinner2.classList.add('hide');
     var $error2 = document.querySelector('.error-modal2');
     $error2.classList.add('modal-active');
-    $intro.classList.add('hide');
-    $quoteHere.classList.add('hide');
-    $moreQuotes.classList.add('hide');
   });
 }
 
@@ -117,6 +139,9 @@ function changeQuote() {
   xhr2.open('GET', 'https://api.quotable.io/random');
   xhr2.responseType = 'json';
   $spinner2.classList.remove('hide');
+  $intro.classList.add('hide');
+  $quoteHere.classList.add('hide');
+  $moreQuotes.classList.add('hide');
   xhr2.addEventListener('load', function () {
     $spinner2.classList.add('hide');
     $quoteHere.classList.remove('hide');
@@ -124,14 +149,14 @@ function changeQuote() {
     $quoteHere.appendChild($quoteHeading);
     $quoteParagraph.textContent = '- ' + xhr2.response.author;
     $quoteHere.appendChild($quoteParagraph);
+    $intro.classList.remove('hide');
+    $quoteHere.classList.remove('hide');
+    $moreQuotes.classList.remove('hide');
   });
   xhr2.send();
   xhr2.addEventListener('error', function () {
     $spinner2.classList.add('hide');
     $error2.classList.add('modal-active');
-    $intro.classList.add('hide');
-    $quoteHere.classList.add('hide');
-    $moreQuotes.classList.add('hide');
   });
 }
 
